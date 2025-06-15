@@ -185,15 +185,21 @@ const SearchForm = () => {
     guests: 1,
   });
 
+  const formatDatePlaceholder = (field: string) => {
+    if (field === "checkIn" && !searchData.checkIn) return "Add dates";
+    if (field === "checkOut" && !searchData.checkOut) return "Add dates";
+    return "";
+  };
+
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <div className="bg-white rounded-full shadow-xl border border-gray-200 p-2">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+    <div className="w-full max-w-5xl mx-auto">
+      <div className="bg-white rounded-full shadow-2xl border border-gray-100 p-2 hover:shadow-3xl transition-shadow duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
           {/* Location */}
-          <div className="relative">
-            <div className="flex items-center space-x-3 p-4 rounded-full hover:bg-gray-50 transition-colors">
+          <div className="relative group">
+            <div className="flex items-center p-6 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
               <div className="flex-1">
-                <label className="block text-xs font-bold text-gray-900 mb-1">
+                <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
                   Where
                 </label>
                 <Input
@@ -202,55 +208,101 @@ const SearchForm = () => {
                   onChange={(e) =>
                     setSearchData({ ...searchData, location: e.target.value })
                   }
-                  className="border-0 p-0 text-sm placeholder:text-gray-400 focus-visible:ring-0"
+                  className="border-0 p-0 text-base font-medium placeholder:text-gray-400 focus-visible:ring-0 bg-transparent"
                 />
               </div>
             </div>
           </div>
 
           {/* Check-in */}
-          <div className="relative border-l border-gray-200">
-            <div className="flex items-center space-x-3 p-4 rounded-full hover:bg-gray-50 transition-colors">
+          <div className="relative group border-l border-gray-200">
+            <div className="flex items-center p-6 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
               <div className="flex-1">
-                <label className="block text-xs font-bold text-gray-900 mb-1">
+                <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
                   Check in
                 </label>
+                {searchData.checkIn ? (
+                  <Input
+                    type="date"
+                    value={searchData.checkIn}
+                    onChange={(e) =>
+                      setSearchData({ ...searchData, checkIn: e.target.value })
+                    }
+                    className="border-0 p-0 text-base font-medium focus-visible:ring-0 bg-transparent"
+                  />
+                ) : (
+                  <button
+                    onClick={() => {
+                      const dateInput = document.querySelector(
+                        'input[type="date"][data-field="checkIn"]',
+                      ) as HTMLInputElement;
+                      if (dateInput) dateInput.showPicker();
+                    }}
+                    className="text-left text-base text-gray-400 font-medium"
+                  >
+                    Add dates
+                  </button>
+                )}
                 <Input
                   type="date"
+                  data-field="checkIn"
                   value={searchData.checkIn}
                   onChange={(e) =>
                     setSearchData({ ...searchData, checkIn: e.target.value })
                   }
-                  className="border-0 p-0 text-sm focus-visible:ring-0"
+                  className="hidden"
                 />
               </div>
             </div>
           </div>
 
           {/* Check-out */}
-          <div className="relative border-l border-gray-200">
-            <div className="flex items-center space-x-3 p-4 rounded-full hover:bg-gray-50 transition-colors">
+          <div className="relative group border-l border-gray-200">
+            <div className="flex items-center p-6 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
               <div className="flex-1">
-                <label className="block text-xs font-bold text-gray-900 mb-1">
+                <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
                   Check out
                 </label>
+                {searchData.checkOut ? (
+                  <Input
+                    type="date"
+                    value={searchData.checkOut}
+                    onChange={(e) =>
+                      setSearchData({ ...searchData, checkOut: e.target.value })
+                    }
+                    className="border-0 p-0 text-base font-medium focus-visible:ring-0 bg-transparent"
+                  />
+                ) : (
+                  <button
+                    onClick={() => {
+                      const dateInput = document.querySelector(
+                        'input[type="date"][data-field="checkOut"]',
+                      ) as HTMLInputElement;
+                      if (dateInput) dateInput.showPicker();
+                    }}
+                    className="text-left text-base text-gray-400 font-medium"
+                  >
+                    Add dates
+                  </button>
+                )}
                 <Input
                   type="date"
+                  data-field="checkOut"
                   value={searchData.checkOut}
                   onChange={(e) =>
                     setSearchData({ ...searchData, checkOut: e.target.value })
                   }
-                  className="border-0 p-0 text-sm focus-visible:ring-0"
+                  className="hidden"
                 />
               </div>
             </div>
           </div>
 
           {/* Guests & Search */}
-          <div className="relative border-l border-gray-200">
-            <div className="flex items-center justify-between p-4">
+          <div className="relative group border-l border-gray-200">
+            <div className="flex items-center justify-between p-6">
               <div className="flex-1">
-                <label className="block text-xs font-bold text-gray-900 mb-1">
+                <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
                   Who
                 </label>
                 <select
@@ -261,7 +313,7 @@ const SearchForm = () => {
                       guests: parseInt(e.target.value),
                     })
                   }
-                  className="border-0 p-0 text-sm bg-transparent focus:outline-none"
+                  className="border-0 p-0 text-base font-medium bg-transparent focus:outline-none cursor-pointer text-gray-600"
                 >
                   <option value={1}>1 guest</option>
                   <option value={2}>2 guests</option>
@@ -272,7 +324,7 @@ const SearchForm = () => {
               </div>
               <Button
                 size="lg"
-                className="rounded-full w-12 h-12 bg-red-500 hover:bg-red-600 ml-4"
+                className="rounded-full w-14 h-14 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 ml-4 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
               >
                 <Search className="w-5 h-5" />
               </Button>
@@ -311,17 +363,40 @@ export default function Index() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-red-50 to-pink-50">
-        <div className="relative z-10 pt-16 pb-24">
+      <section className="relative bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-red-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-red-100/10 to-pink-100/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative z-10 pt-20 pb-32">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
-              Find your next stay
+            <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-8 text-balance leading-tight">
+              Find your next{" "}
+              <span className="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+                stay
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto text-balance">
+            <p className="text-xl md:text-2xl text-gray-600 mb-16 max-w-4xl mx-auto text-balance font-medium leading-relaxed">
               Discover amazing places to stay around the world. From cozy
               apartments to luxury villas.
             </p>
             <SearchForm />
+
+            {/* Popular searches */}
+            <div className="mt-12 flex flex-wrap justify-center gap-3">
+              <span className="text-sm text-gray-500 mr-2">Popular:</span>
+              {["New York", "Paris", "Tokyo", "London", "Bali"].map((city) => (
+                <button
+                  key={city}
+                  className="px-4 py-2 bg-white/80 hover:bg-white text-gray-700 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md border border-gray-200/50"
+                >
+                  {city}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
