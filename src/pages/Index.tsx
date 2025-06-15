@@ -185,21 +185,15 @@ const SearchForm = () => {
     guests: 1,
   });
 
-  const formatDatePlaceholder = (field: string) => {
-    if (field === "checkIn" && !searchData.checkIn) return "Add dates";
-    if (field === "checkOut" && !searchData.checkOut) return "Add dates";
-    return "";
-  };
-
   return (
-    <div className="w-full max-w-5xl mx-auto">
-      <div className="bg-white rounded-full shadow-2xl border border-gray-100 p-2 hover:shadow-3xl transition-shadow duration-300">
+    <div className="w-full max-w-4xl mx-auto">
+      <div className="bg-white rounded-full shadow-xl border border-gray-200 p-1 hover:shadow-2xl transition-shadow duration-300">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
           {/* Location */}
           <div className="relative group">
-            <div className="flex items-center p-6 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+            <div className="flex items-center px-6 py-4 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
               <div className="flex-1">
-                <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                <label className="block text-xs font-semibold text-gray-700 mb-1 uppercase tracking-wide">
                   Where
                 </label>
                 <Input
@@ -208,7 +202,7 @@ const SearchForm = () => {
                   onChange={(e) =>
                     setSearchData({ ...searchData, location: e.target.value })
                   }
-                  className="border-0 p-0 text-base font-medium placeholder:text-gray-400 focus-visible:ring-0 bg-transparent"
+                  className="border-0 p-0 text-sm font-medium placeholder:text-gray-400 focus-visible:ring-0 bg-transparent"
                 />
               </div>
             </div>
@@ -216,9 +210,9 @@ const SearchForm = () => {
 
           {/* Check-in */}
           <div className="relative group border-l border-gray-200">
-            <div className="flex items-center p-6 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+            <div className="flex items-center px-6 py-4 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
               <div className="flex-1">
-                <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                <label className="block text-xs font-semibold text-gray-700 mb-1 uppercase tracking-wide">
                   Check in
                 </label>
                 {searchData.checkIn ? (
@@ -228,7 +222,7 @@ const SearchForm = () => {
                     onChange={(e) =>
                       setSearchData({ ...searchData, checkIn: e.target.value })
                     }
-                    className="border-0 p-0 text-base font-medium focus-visible:ring-0 bg-transparent"
+                    className="border-0 p-0 text-sm font-medium focus-visible:ring-0 bg-transparent"
                   />
                 ) : (
                   <button
@@ -238,7 +232,7 @@ const SearchForm = () => {
                       ) as HTMLInputElement;
                       if (dateInput) dateInput.showPicker();
                     }}
-                    className="text-left text-base text-gray-400 font-medium"
+                    className="text-left text-sm text-gray-400 font-medium"
                   >
                     Add dates
                   </button>
@@ -258,9 +252,9 @@ const SearchForm = () => {
 
           {/* Check-out */}
           <div className="relative group border-l border-gray-200">
-            <div className="flex items-center p-6 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+            <div className="flex items-center px-6 py-4 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
               <div className="flex-1">
-                <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                <label className="block text-xs font-semibold text-gray-700 mb-1 uppercase tracking-wide">
                   Check out
                 </label>
                 {searchData.checkOut ? (
@@ -270,7 +264,7 @@ const SearchForm = () => {
                     onChange={(e) =>
                       setSearchData({ ...searchData, checkOut: e.target.value })
                     }
-                    className="border-0 p-0 text-base font-medium focus-visible:ring-0 bg-transparent"
+                    className="border-0 p-0 text-sm font-medium focus-visible:ring-0 bg-transparent"
                   />
                 ) : (
                   <button
@@ -280,7 +274,7 @@ const SearchForm = () => {
                       ) as HTMLInputElement;
                       if (dateInput) dateInput.showPicker();
                     }}
-                    className="text-left text-base text-gray-400 font-medium"
+                    className="text-left text-sm text-gray-400 font-medium"
                   >
                     Add dates
                   </button>
@@ -300,9 +294,9 @@ const SearchForm = () => {
 
           {/* Guests & Search */}
           <div className="relative group border-l border-gray-200">
-            <div className="flex items-center justify-between p-6">
+            <div className="flex items-center justify-between px-6 py-4">
               <div className="flex-1">
-                <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                <label className="block text-xs font-semibold text-gray-700 mb-1 uppercase tracking-wide">
                   Who
                 </label>
                 <select
@@ -313,7 +307,7 @@ const SearchForm = () => {
                       guests: parseInt(e.target.value),
                     })
                   }
-                  className="border-0 p-0 text-base font-medium bg-transparent focus:outline-none cursor-pointer text-gray-600"
+                  className="border-0 p-0 text-sm font-medium bg-transparent focus:outline-none cursor-pointer text-gray-600"
                 >
                   <option value={1}>1 guest</option>
                   <option value={2}>2 guests</option>
@@ -323,10 +317,10 @@ const SearchForm = () => {
                 </select>
               </div>
               <Button
-                size="lg"
-                className="rounded-full w-14 h-14 bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 ml-4 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                size="sm"
+                className="rounded-full w-12 h-12 bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 ml-3 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
               >
-                <Search className="w-5 h-5" />
+                <Search className="w-4 h-4" />
               </Button>
             </div>
           </div>
