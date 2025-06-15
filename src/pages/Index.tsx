@@ -324,7 +324,7 @@ const SearchForm = () => {
               </div>
               <Button
                 size="lg"
-                className="rounded-full w-14 h-14 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 ml-4 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                className="rounded-full w-14 h-14 bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 ml-4 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
               >
                 <Search className="w-5 h-5" />
               </Button>
@@ -363,19 +363,19 @@ export default function Index() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gray-50 via-slate-50 to-zinc-50 overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-red-200/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-red-100/10 to-pink-100/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gray-300/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-slate-300/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-gray-200/10 to-slate-200/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 pt-20 pb-32">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-8 text-balance leading-tight">
               Find your next{" "}
-              <span className="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent">
                 stay
               </span>
             </h1>
@@ -515,7 +515,7 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">S</span>
                 </div>
                 <span className="text-xl font-bold">StayFinder</span>

@@ -179,7 +179,7 @@ const Login = () => {
                     </label>
                   </div>
                   <div className="text-sm">
-                    <a href="#" className="text-red-600 hover:text-red-500">
+                    <a href="#" className="text-gray-800 hover:text-black">
                       Forgot your password?
                     </a>
                   </div>
@@ -188,7 +188,7 @@ const Login = () => {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-red-500 hover:bg-red-600 text-white"
+                  className="w-full bg-black hover:bg-gray-800 text-white"
                   disabled={isLoading}
                 >
                   {isLoading ? "Signing in..." : "Sign in"}
@@ -262,7 +262,7 @@ const Login = () => {
               Don't have an account?{" "}
               <Link
                 to="/register"
-                className="font-medium text-red-600 hover:text-red-500"
+                className="font-medium text-gray-800 hover:text-black"
               >
                 Sign up
               </Link>

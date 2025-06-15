@@ -409,7 +409,7 @@ const PropertyDetail = () => {
                   </div>
                 </div>
 
-                <Button className="w-full bg-red-500 hover:bg-red-600 text-white mb-4">
+                <Button className="w-full bg-black hover:bg-gray-800 text-white mb-4">
                   Reserve
                 </Button>
 

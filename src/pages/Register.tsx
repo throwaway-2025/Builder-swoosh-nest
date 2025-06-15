@@ -357,14 +357,14 @@ const Register = () => {
                       I agree to StayFinder's{" "}
                       <a
                         href="#"
-                        className="text-red-600 hover:text-red-500 underline"
+                        className="text-gray-800 hover:text-black underline"
                       >
                         Terms of Service
                       </a>{" "}
                       and{" "}
                       <a
                         href="#"
-                        className="text-red-600 hover:text-red-500 underline"
+                        className="text-gray-800 hover:text-black underline"
                       >
                         Privacy Policy
                       </a>
@@ -401,7 +401,7 @@ const Register = () => {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-red-500 hover:bg-red-600 text-white"
+                  className="w-full bg-black hover:bg-gray-800 text-white"
                   disabled={isLoading}
                 >
                   {isLoading ? "Creating account..." : "Create account"}
@@ -475,7 +475,7 @@ const Register = () => {
               Already have an account?{" "}
               <Link
                 to="/login"
-                className="font-medium text-red-600 hover:text-red-500"
+                className="font-medium text-gray-800 hover:text-black"
               >
                 Sign in
               </Link>

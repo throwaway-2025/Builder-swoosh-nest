@@ -12,7 +12,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">S</span>
             </div>
             <span className="text-xl font-bold text-gray-900">StayFinder</span>
@@ -63,7 +63,7 @@ const Navigation = () => {
                 </Button>
               </Link>
               <Link to="/register">
-                <Button className="bg-red-500 text-white hover:bg-red-600 rounded-full px-6 py-2 text-sm">
+                <Button className="bg-black text-white hover:bg-gray-800 rounded-full px-6 py-2 text-sm">
                   Sign Up
                 </Button>
               </Link>
