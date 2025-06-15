@@ -210,41 +210,19 @@ const SearchForm = () => {
 
           {/* Check-in */}
           <div className="relative group border-l border-gray-200">
-            <div className="flex items-center px-6 py-4 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+            <div className="flex items-center px-6 py-4 rounded-full hover:bg-gray-50 transition-all duration-200">
               <div className="flex-1">
                 <label className="block text-xs font-semibold text-gray-700 mb-1 uppercase tracking-wide">
                   Check in
                 </label>
-                {searchData.checkIn ? (
-                  <Input
-                    type="date"
-                    value={searchData.checkIn}
-                    onChange={(e) =>
-                      setSearchData({ ...searchData, checkIn: e.target.value })
-                    }
-                    className="border-0 p-0 text-sm font-medium focus-visible:ring-0 bg-transparent"
-                  />
-                ) : (
-                  <button
-                    onClick={() => {
-                      const dateInput = document.querySelector(
-                        'input[type="date"][data-field="checkIn"]',
-                      ) as HTMLInputElement;
-                      if (dateInput) dateInput.showPicker();
-                    }}
-                    className="text-left text-sm text-gray-400 font-medium"
-                  >
-                    Add dates
-                  </button>
-                )}
                 <Input
                   type="date"
-                  data-field="checkIn"
                   value={searchData.checkIn}
                   onChange={(e) =>
                     setSearchData({ ...searchData, checkIn: e.target.value })
                   }
-                  className="hidden"
+                  placeholder="Add dates"
+                  className="border-0 p-0 text-sm font-medium focus-visible:ring-0 bg-transparent placeholder:text-gray-400 cursor-pointer"
                 />
               </div>
             </div>
@@ -252,41 +230,19 @@ const SearchForm = () => {
 
           {/* Check-out */}
           <div className="relative group border-l border-gray-200">
-            <div className="flex items-center px-6 py-4 rounded-full hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+            <div className="flex items-center px-6 py-4 rounded-full hover:bg-gray-50 transition-all duration-200">
               <div className="flex-1">
                 <label className="block text-xs font-semibold text-gray-700 mb-1 uppercase tracking-wide">
                   Check out
                 </label>
-                {searchData.checkOut ? (
-                  <Input
-                    type="date"
-                    value={searchData.checkOut}
-                    onChange={(e) =>
-                      setSearchData({ ...searchData, checkOut: e.target.value })
-                    }
-                    className="border-0 p-0 text-sm font-medium focus-visible:ring-0 bg-transparent"
-                  />
-                ) : (
-                  <button
-                    onClick={() => {
-                      const dateInput = document.querySelector(
-                        'input[type="date"][data-field="checkOut"]',
-                      ) as HTMLInputElement;
-                      if (dateInput) dateInput.showPicker();
-                    }}
-                    className="text-left text-sm text-gray-400 font-medium"
-                  >
-                    Add dates
-                  </button>
-                )}
                 <Input
                   type="date"
-                  data-field="checkOut"
                   value={searchData.checkOut}
                   onChange={(e) =>
                     setSearchData({ ...searchData, checkOut: e.target.value })
                   }
-                  className="hidden"
+                  placeholder="Add dates"
+                  className="border-0 p-0 text-sm font-medium focus-visible:ring-0 bg-transparent placeholder:text-gray-400 cursor-pointer"
                 />
               </div>
             </div>
