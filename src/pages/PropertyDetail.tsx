@@ -21,72 +21,190 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 
-// Mock property data (in real app, this would come from an API)
-const mockProperty = {
-  id: 1,
-  title: "Stunning Ocean View Villa",
-  location: "Malibu, California, United States",
-  price: 350,
-  rating: 4.95,
-  reviewCount: 187,
-  images: [
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-  ],
-  type: "Entire villa",
-  hostName: "Sarah",
-  hostImage:
-    "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
-  hostJoined: "2019",
-  bedrooms: 4,
-  bathrooms: 3,
-  guests: 8,
-  description: `Experience luxury living in this stunning oceanfront villa in Malibu. Wake up to breathtaking views of the Pacific Ocean and enjoy direct beach access from your private deck.
-
-This beautifully designed villa features an open-concept living space with floor-to-ceiling windows, a gourmet kitchen with high-end appliances, and spacious bedrooms with ocean views. The outdoor space includes a private deck, outdoor dining area, and direct access to the beach.
-
-Perfect for families or groups looking for a peaceful retreat with easy access to Malibu's best restaurants, hiking trails, and attractions.`,
-  amenities: [
-    { icon: Wifi, name: "WiFi" },
-    { icon: Car, name: "Free parking" },
-    { icon: UtensilsCrossed, name: "Kitchen" },
-    { icon: Waves, name: "Beach access" },
-    { icon: Shield, name: "Security cameras" },
-  ],
-  rules: [
-    "Check-in: 3:00 PM - 10:00 PM",
-    "Checkout: 11:00 AM",
-    "No smoking",
-    "No pets",
-    "No parties or events",
-    "Quiet hours after 10 PM",
-  ],
-  reviews: [
-    {
-      id: 1,
-      userName: "Mike",
-      userImage:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
-      rating: 5,
-      date: "December 2023",
-      comment:
-        "Absolutely stunning place! The ocean views are incredible and the house is beautifully appointed. Sarah was a wonderful host and very responsive.",
-    },
-    {
-      id: 2,
-      userName: "Jessica",
-      userImage:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
-      rating: 5,
-      date: "November 2023",
-      comment:
-        "Perfect for our family vacation. The kids loved having direct beach access and the kitchen was well-equipped for cooking meals.",
-    },
-  ],
-};
+// Mock properties database (in real app, this would come from an API)
+const mockProperties = [
+  {
+    id: 1,
+    title: "Stunning Ocean View Villa",
+    location: "Malibu, California, United States",
+    price: 350,
+    rating: 4.95,
+    reviewCount: 187,
+    images: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    ],
+    type: "Entire villa",
+    hostName: "Sarah",
+    hostImage:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
+    hostJoined: "2019",
+    bedrooms: 4,
+    bathrooms: 3,
+    guests: 8,
+    description: `Experience luxury living in this stunning oceanfront villa in Malibu. Wake up to breathtaking views of the Pacific Ocean and enjoy direct beach access from your private deck.`,
+    amenities: [
+      { icon: Wifi, name: "WiFi" },
+      { icon: Car, name: "Free parking" },
+      { icon: UtensilsCrossed, name: "Kitchen" },
+      { icon: Waves, name: "Beach access" },
+      { icon: Shield, name: "Security cameras" },
+    ],
+    rules: [
+      "Check-in: 3:00 PM - 10:00 PM",
+      "Checkout: 11:00 AM",
+      "No smoking",
+      "No pets",
+      "No parties or events",
+      "Quiet hours after 10 PM",
+    ],
+    reviews: [
+      {
+        id: 1,
+        userName: "Mike",
+        userImage:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+        rating: 5,
+        date: "December 2023",
+        comment:
+          "Absolutely stunning place! The ocean views are incredible and the house is beautifully appointed. Sarah was a wonderful host and very responsive.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Cozy Mountain Cabin",
+    location: "Aspen, Colorado, United States",
+    price: 225,
+    rating: 4.89,
+    reviewCount: 134,
+    images: [
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    ],
+    type: "Entire cabin",
+    hostName: "Mike",
+    hostImage:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+    hostJoined: "2020",
+    bedrooms: 3,
+    bathrooms: 2,
+    guests: 6,
+    description: `Escape to this cozy mountain cabin in Aspen. Perfect for a peaceful retreat with stunning mountain views and access to world-class skiing.`,
+    amenities: [
+      { icon: Wifi, name: "WiFi" },
+      { icon: Car, name: "Free parking" },
+      { icon: UtensilsCrossed, name: "Kitchen" },
+    ],
+    rules: [
+      "Check-in: 4:00 PM - 9:00 PM",
+      "Checkout: 10:00 AM",
+      "No smoking",
+      "No pets",
+    ],
+    reviews: [
+      {
+        id: 1,
+        userName: "Sarah",
+        userImage:
+          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
+        rating: 5,
+        date: "January 2024",
+        comment:
+          "Amazing cabin with beautiful mountain views. Mike was very helpful and responsive.",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Modern Downtown Loft",
+    location: "Seattle, Washington, United States",
+    price: 189,
+    rating: 4.92,
+    reviewCount: 298,
+    images: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    ],
+    type: "Entire apartment",
+    hostName: "Jessica",
+    hostImage:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+    hostJoined: "2018",
+    bedrooms: 2,
+    bathrooms: 2,
+    guests: 4,
+    description: `Modern downtown loft in the heart of Seattle. Walking distance to Pike Place Market, restaurants, and nightlife.`,
+    amenities: [
+      { icon: Wifi, name: "WiFi" },
+      { icon: UtensilsCrossed, name: "Kitchen" },
+    ],
+    rules: [
+      "Check-in: 3:00 PM - 11:00 PM",
+      "Checkout: 11:00 AM",
+      "No smoking",
+      "No parties or events",
+    ],
+    reviews: [
+      {
+        id: 1,
+        userName: "David",
+        userImage:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+        rating: 5,
+        date: "February 2024",
+        comment:
+          "Perfect location in downtown Seattle. Jessica was an excellent host.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Desert Oasis Retreat",
+    location: "Scottsdale, Arizona, United States",
+    price: 275,
+    rating: 4.88,
+    reviewCount: 156,
+    images: [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    ],
+    type: "Entire house",
+    hostName: "David",
+    hostImage:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    hostJoined: "2021",
+    bedrooms: 3,
+    bathrooms: 3,
+    guests: 6,
+    description: `Beautiful desert retreat in Scottsdale. Features a private pool and stunning desert views.`,
+    amenities: [
+      { icon: Wifi, name: "WiFi" },
+      { icon: Car, name: "Free parking" },
+      { icon: UtensilsCrossed, name: "Kitchen" },
+    ],
+    rules: [
+      "Check-in: 4:00 PM - 10:00 PM",
+      "Checkout: 11:00 AM",
+      "No smoking",
+      "No pets",
+    ],
+    reviews: [
+      {
+        id: 1,
+        userName: "Emma",
+        userImage:
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+        rating: 5,
+        date: "March 2024",
+        comment:
+          "Loved the pool and the desert views. David was very accommodating.",
+      },
+    ],
+  },
+];
 
 const PropertyDetail = () => {
   const { id } = useParams();
@@ -96,7 +214,9 @@ const PropertyDetail = () => {
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState(1);
 
-  const property = mockProperty; // In real app, fetch by ID
+  const property =
+    mockProperties.find((p) => p.id === parseInt(id || "1")) ||
+    mockProperties[0];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
