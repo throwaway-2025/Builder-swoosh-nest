@@ -39,8 +39,7 @@ const mockProperties = [
     ],
     type: "Entire villa",
     hostName: "Sarah",
-    hostImage:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
+    hostImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
     hostJoined: "2019",
     bedrooms: 4,
     bathrooms: 3,
@@ -65,12 +64,10 @@ const mockProperties = [
       {
         id: 1,
         userName: "Mike",
-        userImage:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+        userImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
         rating: 5,
         date: "December 2023",
-        comment:
-          "Absolutely stunning place! The ocean views are incredible and the house is beautifully appointed. Sarah was a wonderful host and very responsive.",
+        comment: "Absolutely stunning place! The ocean views are incredible and the house is beautifully appointed. Sarah was a wonderful host and very responsive.",
       },
     ],
   },
@@ -87,8 +84,7 @@ const mockProperties = [
     ],
     type: "Entire cabin",
     hostName: "Mike",
-    hostImage:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+    hostImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
     hostJoined: "2020",
     bedrooms: 3,
     bathrooms: 2,
@@ -109,12 +105,10 @@ const mockProperties = [
       {
         id: 1,
         userName: "Sarah",
-        userImage:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
+        userImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
         rating: 5,
         date: "January 2024",
-        comment:
-          "Amazing cabin with beautiful mountain views. Mike was very helpful and responsive.",
+        comment: "Amazing cabin with beautiful mountain views. Mike was very helpful and responsive.",
       },
     ],
   },
@@ -131,8 +125,7 @@ const mockProperties = [
     ],
     type: "Entire apartment",
     hostName: "Jessica",
-    hostImage:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+    hostImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
     hostJoined: "2018",
     bedrooms: 2,
     bathrooms: 2,
@@ -152,12 +145,10 @@ const mockProperties = [
       {
         id: 1,
         userName: "David",
-        userImage:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+        userImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
         rating: 5,
         date: "February 2024",
-        comment:
-          "Perfect location in downtown Seattle. Jessica was an excellent host.",
+        comment: "Perfect location in downtown Seattle. Jessica was an excellent host.",
       },
     ],
   },
@@ -173,8 +164,7 @@ const mockProperties = [
     ],
     type: "Entire house",
     hostName: "David",
-    hostImage:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    hostImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
     hostJoined: "2021",
     bedrooms: 3,
     bathrooms: 3,
@@ -195,15 +185,179 @@ const mockProperties = [
       {
         id: 1,
         userName: "Emma",
-        userImage:
-          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+        userImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
         rating: 5,
         date: "March 2024",
-        comment:
-          "Loved the pool and the desert views. David was very accommodating.",
+        comment: "Loved the pool and the desert views. David was very accommodating.",
+    },
+  },
+  {
+    id: 5,
+    title: "Lakeside Cottage",
+    location: "Lake Tahoe, Nevada, United States",
+    price: 195,
+    rating: 4.94,
+    reviewCount: 203,
+    images: [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    ],
+    type: "Entire cottage",
+    hostName: "Emma",
+    hostImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+    hostJoined: "2019",
+    bedrooms: 2,
+    bathrooms: 1,
+    guests: 4,
+    description: `Charming lakeside cottage with stunning views of Lake Tahoe. Perfect for a peaceful retreat with access to water activities.`,
+    amenities: [
+      { icon: Wifi, name: "WiFi" },
+      { icon: Car, name: "Free parking" },
+      { icon: UtensilsCrossed, name: "Kitchen" },
+      { icon: Waves, name: "Lake access" },
+    ],
+    rules: [
+      "Check-in: 3:00 PM - 8:00 PM",
+      "Checkout: 11:00 AM",
+      "No smoking",
+      "No pets",
+    ],
+    reviews: [
+      {
+        id: 1,
+        userName: "Robert",
+        userImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+        rating: 5,
+        date: "April 2024",
+        comment: "Beautiful cottage with amazing lake views. Emma was very welcoming.",
       },
     ],
   },
+  {
+    id: 6,
+    title: "Historic City Apartment",
+    location: "Savannah, Georgia, United States",
+    price: 145,
+    rating: 4.87,
+    reviewCount: 167,
+    images: [
+      "https://images.unsplash.com/photo-1578774296842-c45e472b3028?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    ],
+    type: "Private room",
+    hostName: "Robert",
+    hostImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
+    hostJoined: "2017",
+    bedrooms: 1,
+    bathrooms: 1,
+    guests: 2,
+    description: `Historic apartment in the heart of Savannah's historic district. Walking distance to all major attractions.`,
+    amenities: [
+      { icon: Wifi, name: "WiFi" },
+      { icon: UtensilsCrossed, name: "Kitchen" },
+    ],
+    rules: [
+      "Check-in: 2:00 PM - 9:00 PM",
+      "Checkout: 10:00 AM",
+      "No smoking",
+      "No pets",
+      "Quiet hours after 9 PM",
+    ],
+    reviews: [
+      {
+        id: 1,
+        userName: "Lisa",
+        userImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
+        rating: 5,
+        date: "May 2024",
+        comment: "Perfect location in historic Savannah. Robert was very helpful with recommendations.",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Beachfront Bungalow",
+    location: "Maui, Hawaii, United States",
+    price: 420,
+    rating: 4.96,
+    reviewCount: 89,
+    images: [
+      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    ],
+    type: "Entire bungalow",
+    hostName: "Aloha",
+    hostImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+    hostJoined: "2020",
+    bedrooms: 3,
+    bathrooms: 2,
+    guests: 6,
+    description: `Spectacular beachfront bungalow in Maui with direct beach access and stunning ocean views.`,
+    amenities: [
+      { icon: Wifi, name: "WiFi" },
+      { icon: Car, name: "Free parking" },
+      { icon: UtensilsCrossed, name: "Kitchen" },
+      { icon: Waves, name: "Beach access" },
+    ],
+    rules: [
+      "Check-in: 4:00 PM - 8:00 PM",
+      "Checkout: 11:00 AM",
+      "No smoking",
+      "No pets",
+      "No parties or events",
+    ],
+    reviews: [
+      {
+        id: 1,
+        userName: "Mark",
+        userImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+        rating: 5,
+        date: "June 2024",
+        comment: "Incredible beachfront location! Aloha was an amazing host with great local tips.",
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Vineyard Estate",
+    location: "Napa Valley, California, United States",
+    price: 550,
+    rating: 4.91,
+    reviewCount: 76,
+    images: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    ],
+    type: "Entire estate",
+    hostName: "Vincent",
+    hostImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    hostJoined: "2016",
+    bedrooms: 5,
+    bathrooms: 4,
+    guests: 10,
+    description: `Luxury vineyard estate in the heart of Napa Valley. Perfect for wine lovers with private tastings and vineyard tours.`,
+    amenities: [
+      { icon: Wifi, name: "WiFi" },
+      { icon: Car, name: "Free parking" },
+      { icon: UtensilsCrossed, name: "Kitchen" },
+      { icon: Shield, name: "Security cameras" },
+    ],
+    rules: [
+      "Check-in: 4:00 PM - 10:00 PM",
+      "Checkout: 12:00 PM",
+      "No smoking",
+      "No pets",
+      "No parties or events",
+      "Quiet hours after 10 PM",
+    ],
+    reviews: [
+      {
+        id: 1,
+        userName: "Caroline",
+        userImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+        rating: 5,
+        date: "July 2024",
+        comment: "Absolutely stunning vineyard estate! Vincent arranged private wine tastings that were incredible.",
+      },
+    ],
+  },
+];
 ];
 
 const PropertyDetail = () => {
@@ -214,9 +368,7 @@ const PropertyDetail = () => {
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState(1);
 
-  const property =
-    mockProperties.find((p) => p.id === parseInt(id || "1")) ||
-    mockProperties[0];
+  const property = mockProperties.find(p => p.id === parseInt(id || '1')) || mockProperties[0];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
