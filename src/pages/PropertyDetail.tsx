@@ -189,7 +189,8 @@ const mockProperties = [
         rating: 5,
         date: "March 2024",
         comment: "Loved the pool and the desert views. David was very accommodating.",
-    },
+      },
+    ],
   },
   {
     id: 5,
