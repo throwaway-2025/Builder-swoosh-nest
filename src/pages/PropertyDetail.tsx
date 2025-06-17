@@ -39,7 +39,8 @@ const mockProperties = [
     ],
     type: "Entire villa",
     hostName: "Sarah",
-    hostImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
+    hostImage:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
     hostJoined: "2019",
     bedrooms: 4,
     bathrooms: 3,
@@ -64,10 +65,12 @@ const mockProperties = [
       {
         id: 1,
         userName: "Mike",
-        userImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+        userImage:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
         rating: 5,
         date: "December 2023",
-        comment: "Absolutely stunning place! The ocean views are incredible and the house is beautifully appointed. Sarah was a wonderful host and very responsive.",
+        comment:
+          "Absolutely stunning place! The ocean views are incredible and the house is beautifully appointed. Sarah was a wonderful host and very responsive.",
       },
     ],
   },
@@ -84,7 +87,8 @@ const mockProperties = [
     ],
     type: "Entire cabin",
     hostName: "Mike",
-    hostImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+    hostImage:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
     hostJoined: "2020",
     bedrooms: 3,
     bathrooms: 2,
@@ -105,10 +109,12 @@ const mockProperties = [
       {
         id: 1,
         userName: "Sarah",
-        userImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
+        userImage:
+          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
         rating: 5,
         date: "January 2024",
-        comment: "Amazing cabin with beautiful mountain views. Mike was very helpful and responsive.",
+        comment:
+          "Amazing cabin with beautiful mountain views. Mike was very helpful and responsive.",
       },
     ],
   },
@@ -125,7 +131,8 @@ const mockProperties = [
     ],
     type: "Entire apartment",
     hostName: "Jessica",
-    hostImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+    hostImage:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
     hostJoined: "2018",
     bedrooms: 2,
     bathrooms: 2,
@@ -145,10 +152,12 @@ const mockProperties = [
       {
         id: 1,
         userName: "David",
-        userImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+        userImage:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
         rating: 5,
         date: "February 2024",
-        comment: "Perfect location in downtown Seattle. Jessica was an excellent host.",
+        comment:
+          "Perfect location in downtown Seattle. Jessica was an excellent host.",
       },
     ],
   },
@@ -164,7 +173,8 @@ const mockProperties = [
     ],
     type: "Entire house",
     hostName: "David",
-    hostImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    hostImage:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
     hostJoined: "2021",
     bedrooms: 3,
     bathrooms: 3,
@@ -185,10 +195,12 @@ const mockProperties = [
       {
         id: 1,
         userName: "Emma",
-        userImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+        userImage:
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
         rating: 5,
         date: "March 2024",
-        comment: "Loved the pool and the desert views. David was very accommodating.",
+        comment:
+          "Loved the pool and the desert views. David was very accommodating.",
       },
     ],
   },
@@ -204,7 +216,8 @@ const mockProperties = [
     ],
     type: "Entire cottage",
     hostName: "Emma",
-    hostImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+    hostImage:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
     hostJoined: "2019",
     bedrooms: 2,
     bathrooms: 1,
@@ -226,10 +239,12 @@ const mockProperties = [
       {
         id: 1,
         userName: "Robert",
-        userImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+        userImage:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
         rating: 5,
         date: "April 2024",
-        comment: "Beautiful cottage with amazing lake views. Emma was very welcoming.",
+        comment:
+          "Beautiful cottage with amazing lake views. Emma was very welcoming.",
       },
     ],
   },
@@ -245,7 +260,8 @@ const mockProperties = [
     ],
     type: "Private room",
     hostName: "Robert",
-    hostImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
+    hostImage:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
     hostJoined: "2017",
     bedrooms: 1,
     bathrooms: 1,
@@ -266,10 +282,12 @@ const mockProperties = [
       {
         id: 1,
         userName: "Lisa",
-        userImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
+        userImage:
+          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
         rating: 5,
         date: "May 2024",
-        comment: "Perfect location in historic Savannah. Robert was very helpful with recommendations.",
+        comment:
+          "Perfect location in historic Savannah. Robert was very helpful with recommendations.",
       },
     ],
   },
@@ -285,7 +303,8 @@ const mockProperties = [
     ],
     type: "Entire bungalow",
     hostName: "Aloha",
-    hostImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+    hostImage:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
     hostJoined: "2020",
     bedrooms: 3,
     bathrooms: 2,
@@ -308,10 +327,12 @@ const mockProperties = [
       {
         id: 1,
         userName: "Mark",
-        userImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+        userImage:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
         rating: 5,
         date: "June 2024",
-        comment: "Incredible beachfront location! Aloha was an amazing host with great local tips.",
+        comment:
+          "Incredible beachfront location! Aloha was an amazing host with great local tips.",
       },
     ],
   },
@@ -327,7 +348,8 @@ const mockProperties = [
     ],
     type: "Entire estate",
     hostName: "Vincent",
-    hostImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    hostImage:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
     hostJoined: "2016",
     bedrooms: 5,
     bathrooms: 4,
@@ -351,14 +373,15 @@ const mockProperties = [
       {
         id: 1,
         userName: "Caroline",
-        userImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+        userImage:
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
         rating: 5,
         date: "July 2024",
-        comment: "Absolutely stunning vineyard estate! Vincent arranged private wine tastings that were incredible.",
+        comment:
+          "Absolutely stunning vineyard estate! Vincent arranged private wine tastings that were incredible.",
       },
     ],
   },
-];
 ];
 
 const PropertyDetail = () => {
@@ -369,7 +392,9 @@ const PropertyDetail = () => {
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState(1);
 
-  const property = mockProperties.find(p => p.id === parseInt(id || '1')) || mockProperties[0];
+  const property =
+    mockProperties.find((p) => p.id === parseInt(id || "1")) ||
+    mockProperties[0];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
